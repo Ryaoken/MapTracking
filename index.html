@@ -11,11 +11,12 @@
         <link rel="stylesheet" href="css/L.Control.Locate.min.css">
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-search.css">
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <style>
         #map {
-            width: 1300px;
-            height: 853px;
+            width: 1916px;
+            height: 1213px;
         }
         </style>
         <title></title>
@@ -35,43 +36,53 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="data/StSavioursChurchHall_1.js"></script>
-        <script src="data/ChinehamVillageHall_2.js"></script>
-        <script src="data/MiltonMethodistChurch_3.js"></script>
-        <script src="data/CartertonCommunityCentre_4.js"></script>
-        <script src="data/LangleyHallSocialClub_5.js"></script>
-        <script src="data/EastOakleyVillageHall_6.js"></script>
-        <script src="data/CedarBarnHall_7.js"></script>
-        <script src="data/StGabrielsChurch_8.js"></script>
-        <script src="data/MorganCentre_9.js"></script>
-        <script src="data/StLawrenceChurch_10.js"></script>
-        <script src="data/HolyTrinityCatholicChurch_11.js"></script>
-        <script src="data/TabernacleandPentecostalChurch_12.js"></script>
-        <script src="data/TottonandElingCommunityCentre_13.js"></script>
-        <script src="data/CroftCourtHotel_14.js"></script>
-        <script src="data/GreatWyrleyMethodistChurch_15.js"></script>
-        <script src="data/CheamSocialClub_16.js"></script>
-        <script src="data/PaghamVillageHall_17.js"></script>
-        <script src="data/BerstedParkCommunityCentre_18.js"></script>
-        <script src="data/YewTreeTamebridgeCommunityCentre_19.js"></script>
-        <script src="data/ChristtheKingCatholicChurch_20.js"></script>
-        <script src="data/WhetstoneMemorialHall_21.js"></script>
-        <script src="data/PerryBeechesBaptistChurch_22.js"></script>
-        <script src="data/TheShirleyCentre_23.js"></script>
-        <script src="data/NorthBaddesleyVillageHall_24.js"></script>
-        <script src="data/RomseyComradesClub_25.js"></script>
-        <script src="data/FourOaksMethodistChurch_26.js"></script>
-        <script src="data/YeovilExServicesSocialClub_27.js"></script>
-        <script src="data/PortfieldCommunityCentre_28.js"></script>
-        <script src="data/BS14SocialClub_29.js"></script>
-        <script src="data/TheHollymoorCentre_30.js"></script>
-        <script src="data/IrthlingboroughCricketClub_31.js"></script>
-        <script src="data/StowParkLawnTennisClub_32.js"></script>
-        <script src="data/ParkesHallSocialClub_33.js"></script>
-        <script src="data/CoveBaptistChurch_34.js"></script>
-        <script src="data/BeaufortCommunityCentre_35.js"></script>
-        <script src="data/SouthamptonPrioryParkCommunityHallmerged_36.js"></script>
-        <script src="data/Venue_37.js"></script>
+        <script src="js/leaflet-search.js"></script>
+        <script src="data/StSimonsChurch_1.js"></script>
+        <script src="data/OurLadyoftheRosaryRCChurch_2.js"></script>
+        <script src="data/BushmeadCommunityHub_3.js"></script>
+        <script src="data/StKatherinesParishCentre_4.js"></script>
+        <script src="data/StAlbantheMartyrsChurchHall_5.js"></script>
+        <script src="data/GoldingtonReadingRecreationRooms_6.js"></script>
+        <script src="data/PrioryMethodistChurch_7.js"></script>
+        <script src="data/StAndrewsChurch_8.js"></script>
+        <script src="data/TheCatholicChurchCommunityHall_9.js"></script>
+        <script src="data/StSavioursChurchHall_10.js"></script>
+        <script src="data/ChinehamVillageHall_11.js"></script>
+        <script src="data/MiltonMethodistChurch_12.js"></script>
+        <script src="data/CartertonCommunityCentre_13.js"></script>
+        <script src="data/LangleyHallSocialClub_14.js"></script>
+        <script src="data/EastOakleyVillageHall_15.js"></script>
+        <script src="data/CedarBarnHall_16.js"></script>
+        <script src="data/StGabrielsChurch_17.js"></script>
+        <script src="data/MorganCentre_18.js"></script>
+        <script src="data/StLawrenceChurch_19.js"></script>
+        <script src="data/HolyTrinityCatholicChurch_20.js"></script>
+        <script src="data/TabernacleandPentecostalChurch_21.js"></script>
+        <script src="data/TottonandElingCommunityCentre_22.js"></script>
+        <script src="data/CroftCourtHotel_23.js"></script>
+        <script src="data/GreatWyrleyMethodistChurch_24.js"></script>
+        <script src="data/CheamSocialClub_25.js"></script>
+        <script src="data/PaghamVillageHall_26.js"></script>
+        <script src="data/BerstedParkCommunityCentre_27.js"></script>
+        <script src="data/YewTreeTamebridgeCommunityCentre_28.js"></script>
+        <script src="data/ChristtheKingCatholicChurch_29.js"></script>
+        <script src="data/WhetstoneMemorialHall_30.js"></script>
+        <script src="data/PerryBeechesBaptistChurch_31.js"></script>
+        <script src="data/TheShirleyCentre_32.js"></script>
+        <script src="data/NorthBaddesleyVillageHall_33.js"></script>
+        <script src="data/RomseyComradesClub_34.js"></script>
+        <script src="data/FourOaksMethodistChurch_35.js"></script>
+        <script src="data/YeovilExServicesSocialClub_36.js"></script>
+        <script src="data/PortfieldCommunityCentre_37.js"></script>
+        <script src="data/BS14SocialClub_38.js"></script>
+        <script src="data/TheHollymoorCentre_39.js"></script>
+        <script src="data/IrthlingboroughCricketClub_40.js"></script>
+        <script src="data/StowParkLawnTennisClub_41.js"></script>
+        <script src="data/ParkesHallSocialClub_42.js"></script>
+        <script src="data/CoveBaptistChurch_43.js"></script>
+        <script src="data/BeaufortCommunityCentre_44.js"></script>
+        <script src="data/SouthamptonPrioryParkCommunityHallmerged_45.js"></script>
+        <script src="data/Venue_46.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -80,7 +91,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[51.26844519716376,-1.1027544791599015],[51.32346219658529,-0.9685536429373374]]);
+        }).fitBounds([[50.405451833223545,-4.7321953066043285],[53.74327063653112,3.8560591398660473]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -165,7 +176,7 @@
         });
         layer_GoogleSatelliteView_0;
         map.addLayer(layer_GoogleSatelliteView_0);
-        function pop_StSavioursChurchHall_1(feature, layer) {
+        function pop_StSimonsChurch_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -202,9 +213,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_StSavioursChurchHall_1_0() {
+        function style_StSimonsChurch_1_0() {
             return {
-                pane: 'pane_StSavioursChurchHall_1',
+                pane: 'pane_StSimonsChurch_1',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -215,21 +226,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_StSavioursChurchHall_1');
-        map.getPane('pane_StSavioursChurchHall_1').style.zIndex = 401;
-        map.getPane('pane_StSavioursChurchHall_1').style['mix-blend-mode'] = 'normal';
-        var layer_StSavioursChurchHall_1 = new L.geoJson(json_StSavioursChurchHall_1, {
+        map.createPane('pane_StSimonsChurch_1');
+        map.getPane('pane_StSimonsChurch_1').style.zIndex = 401;
+        map.getPane('pane_StSimonsChurch_1').style['mix-blend-mode'] = 'normal';
+        var layer_StSimonsChurch_1 = new L.geoJson(json_StSimonsChurch_1, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_StSavioursChurchHall_1',
-            layerName: 'layer_StSavioursChurchHall_1',
-            pane: 'pane_StSavioursChurchHall_1',
-            onEachFeature: pop_StSavioursChurchHall_1,
-            style: style_StSavioursChurchHall_1_0,
+            dataVar: 'json_StSimonsChurch_1',
+            layerName: 'layer_StSimonsChurch_1',
+            pane: 'pane_StSimonsChurch_1',
+            onEachFeature: pop_StSimonsChurch_1,
+            style: style_StSimonsChurch_1_0,
         });
-        bounds_group.addLayer(layer_StSavioursChurchHall_1);
-        map.addLayer(layer_StSavioursChurchHall_1);
-        function pop_ChinehamVillageHall_2(feature, layer) {
+        bounds_group.addLayer(layer_StSimonsChurch_1);
+        map.addLayer(layer_StSimonsChurch_1);
+        function pop_OurLadyoftheRosaryRCChurch_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -266,9 +277,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_ChinehamVillageHall_2_0() {
+        function style_OurLadyoftheRosaryRCChurch_2_0() {
             return {
-                pane: 'pane_ChinehamVillageHall_2',
+                pane: 'pane_OurLadyoftheRosaryRCChurch_2',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -279,21 +290,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_ChinehamVillageHall_2');
-        map.getPane('pane_ChinehamVillageHall_2').style.zIndex = 402;
-        map.getPane('pane_ChinehamVillageHall_2').style['mix-blend-mode'] = 'normal';
-        var layer_ChinehamVillageHall_2 = new L.geoJson(json_ChinehamVillageHall_2, {
+        map.createPane('pane_OurLadyoftheRosaryRCChurch_2');
+        map.getPane('pane_OurLadyoftheRosaryRCChurch_2').style.zIndex = 402;
+        map.getPane('pane_OurLadyoftheRosaryRCChurch_2').style['mix-blend-mode'] = 'normal';
+        var layer_OurLadyoftheRosaryRCChurch_2 = new L.geoJson(json_OurLadyoftheRosaryRCChurch_2, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_ChinehamVillageHall_2',
-            layerName: 'layer_ChinehamVillageHall_2',
-            pane: 'pane_ChinehamVillageHall_2',
-            onEachFeature: pop_ChinehamVillageHall_2,
-            style: style_ChinehamVillageHall_2_0,
+            dataVar: 'json_OurLadyoftheRosaryRCChurch_2',
+            layerName: 'layer_OurLadyoftheRosaryRCChurch_2',
+            pane: 'pane_OurLadyoftheRosaryRCChurch_2',
+            onEachFeature: pop_OurLadyoftheRosaryRCChurch_2,
+            style: style_OurLadyoftheRosaryRCChurch_2_0,
         });
-        bounds_group.addLayer(layer_ChinehamVillageHall_2);
-        map.addLayer(layer_ChinehamVillageHall_2);
-        function pop_MiltonMethodistChurch_3(feature, layer) {
+        bounds_group.addLayer(layer_OurLadyoftheRosaryRCChurch_2);
+        map.addLayer(layer_OurLadyoftheRosaryRCChurch_2);
+        function pop_BushmeadCommunityHub_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -330,9 +341,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_MiltonMethodistChurch_3_0() {
+        function style_BushmeadCommunityHub_3_0() {
             return {
-                pane: 'pane_MiltonMethodistChurch_3',
+                pane: 'pane_BushmeadCommunityHub_3',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -343,21 +354,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_MiltonMethodistChurch_3');
-        map.getPane('pane_MiltonMethodistChurch_3').style.zIndex = 403;
-        map.getPane('pane_MiltonMethodistChurch_3').style['mix-blend-mode'] = 'normal';
-        var layer_MiltonMethodistChurch_3 = new L.geoJson(json_MiltonMethodistChurch_3, {
+        map.createPane('pane_BushmeadCommunityHub_3');
+        map.getPane('pane_BushmeadCommunityHub_3').style.zIndex = 403;
+        map.getPane('pane_BushmeadCommunityHub_3').style['mix-blend-mode'] = 'normal';
+        var layer_BushmeadCommunityHub_3 = new L.geoJson(json_BushmeadCommunityHub_3, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_MiltonMethodistChurch_3',
-            layerName: 'layer_MiltonMethodistChurch_3',
-            pane: 'pane_MiltonMethodistChurch_3',
-            onEachFeature: pop_MiltonMethodistChurch_3,
-            style: style_MiltonMethodistChurch_3_0,
+            dataVar: 'json_BushmeadCommunityHub_3',
+            layerName: 'layer_BushmeadCommunityHub_3',
+            pane: 'pane_BushmeadCommunityHub_3',
+            onEachFeature: pop_BushmeadCommunityHub_3,
+            style: style_BushmeadCommunityHub_3_0,
         });
-        bounds_group.addLayer(layer_MiltonMethodistChurch_3);
-        map.addLayer(layer_MiltonMethodistChurch_3);
-        function pop_CartertonCommunityCentre_4(feature, layer) {
+        bounds_group.addLayer(layer_BushmeadCommunityHub_3);
+        map.addLayer(layer_BushmeadCommunityHub_3);
+        function pop_StKatherinesParishCentre_4(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -394,457 +405,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CartertonCommunityCentre_4_0() {
+        function style_StKatherinesParishCentre_4_0() {
             return {
-                pane: 'pane_CartertonCommunityCentre_4',
-                opacity: 1,
-                color: 'rgba(0,246,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 4.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_CartertonCommunityCentre_4');
-        map.getPane('pane_CartertonCommunityCentre_4').style.zIndex = 404;
-        map.getPane('pane_CartertonCommunityCentre_4').style['mix-blend-mode'] = 'normal';
-        var layer_CartertonCommunityCentre_4 = new L.geoJson(json_CartertonCommunityCentre_4, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_CartertonCommunityCentre_4',
-            layerName: 'layer_CartertonCommunityCentre_4',
-            pane: 'pane_CartertonCommunityCentre_4',
-            onEachFeature: pop_CartertonCommunityCentre_4,
-            style: style_CartertonCommunityCentre_4_0,
-        });
-        bounds_group.addLayer(layer_CartertonCommunityCentre_4);
-        map.addLayer(layer_CartertonCommunityCentre_4);
-        function pop_LangleyHallSocialClub_5(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_LangleyHallSocialClub_5_0() {
-            return {
-                pane: 'pane_LangleyHallSocialClub_5',
-                opacity: 1,
-                color: 'rgba(0,246,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 4.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_LangleyHallSocialClub_5');
-        map.getPane('pane_LangleyHallSocialClub_5').style.zIndex = 405;
-        map.getPane('pane_LangleyHallSocialClub_5').style['mix-blend-mode'] = 'normal';
-        var layer_LangleyHallSocialClub_5 = new L.geoJson(json_LangleyHallSocialClub_5, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_LangleyHallSocialClub_5',
-            layerName: 'layer_LangleyHallSocialClub_5',
-            pane: 'pane_LangleyHallSocialClub_5',
-            onEachFeature: pop_LangleyHallSocialClub_5,
-            style: style_LangleyHallSocialClub_5_0,
-        });
-        bounds_group.addLayer(layer_LangleyHallSocialClub_5);
-        map.addLayer(layer_LangleyHallSocialClub_5);
-        function pop_EastOakleyVillageHall_6(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_EastOakleyVillageHall_6_0() {
-            return {
-                pane: 'pane_EastOakleyVillageHall_6',
-                opacity: 1,
-                color: 'rgba(0,246,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 4.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_EastOakleyVillageHall_6');
-        map.getPane('pane_EastOakleyVillageHall_6').style.zIndex = 406;
-        map.getPane('pane_EastOakleyVillageHall_6').style['mix-blend-mode'] = 'normal';
-        var layer_EastOakleyVillageHall_6 = new L.geoJson(json_EastOakleyVillageHall_6, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_EastOakleyVillageHall_6',
-            layerName: 'layer_EastOakleyVillageHall_6',
-            pane: 'pane_EastOakleyVillageHall_6',
-            onEachFeature: pop_EastOakleyVillageHall_6,
-            style: style_EastOakleyVillageHall_6_0,
-        });
-        bounds_group.addLayer(layer_EastOakleyVillageHall_6);
-        map.addLayer(layer_EastOakleyVillageHall_6);
-        function pop_CedarBarnHall_7(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_CedarBarnHall_7_0() {
-            return {
-                pane: 'pane_CedarBarnHall_7',
-                opacity: 1,
-                color: 'rgba(0,246,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 4.0,
-                fillOpacity: 0,
-                interactive: false,
-            }
-        }
-        map.createPane('pane_CedarBarnHall_7');
-        map.getPane('pane_CedarBarnHall_7').style.zIndex = 407;
-        map.getPane('pane_CedarBarnHall_7').style['mix-blend-mode'] = 'normal';
-        var layer_CedarBarnHall_7 = new L.geoJson(json_CedarBarnHall_7, {
-            attribution: '',
-            interactive: false,
-            dataVar: 'json_CedarBarnHall_7',
-            layerName: 'layer_CedarBarnHall_7',
-            pane: 'pane_CedarBarnHall_7',
-            onEachFeature: pop_CedarBarnHall_7,
-            style: style_CedarBarnHall_7_0,
-        });
-        bounds_group.addLayer(layer_CedarBarnHall_7);
-        map.addLayer(layer_CedarBarnHall_7);
-        function pop_StGabrielsChurch_8(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_StGabrielsChurch_8_0() {
-            return {
-                pane: 'pane_StGabrielsChurch_8',
-                opacity: 1,
-                color: 'rgba(0,246,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 4.0,
-                fillOpacity: 0,
-                interactive: false,
-            }
-        }
-        map.createPane('pane_StGabrielsChurch_8');
-        map.getPane('pane_StGabrielsChurch_8').style.zIndex = 408;
-        map.getPane('pane_StGabrielsChurch_8').style['mix-blend-mode'] = 'normal';
-        var layer_StGabrielsChurch_8 = new L.geoJson(json_StGabrielsChurch_8, {
-            attribution: '',
-            interactive: false,
-            dataVar: 'json_StGabrielsChurch_8',
-            layerName: 'layer_StGabrielsChurch_8',
-            pane: 'pane_StGabrielsChurch_8',
-            onEachFeature: pop_StGabrielsChurch_8,
-            style: style_StGabrielsChurch_8_0,
-        });
-        bounds_group.addLayer(layer_StGabrielsChurch_8);
-        map.addLayer(layer_StGabrielsChurch_8);
-        function pop_MorganCentre_9(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_MorganCentre_9_0() {
-            return {
-                pane: 'pane_MorganCentre_9',
-                opacity: 1,
-                color: 'rgba(0,246,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 4.0,
-                fillOpacity: 0,
-                interactive: false,
-            }
-        }
-        map.createPane('pane_MorganCentre_9');
-        map.getPane('pane_MorganCentre_9').style.zIndex = 409;
-        map.getPane('pane_MorganCentre_9').style['mix-blend-mode'] = 'normal';
-        var layer_MorganCentre_9 = new L.geoJson(json_MorganCentre_9, {
-            attribution: '',
-            interactive: false,
-            dataVar: 'json_MorganCentre_9',
-            layerName: 'layer_MorganCentre_9',
-            pane: 'pane_MorganCentre_9',
-            onEachFeature: pop_MorganCentre_9,
-            style: style_MorganCentre_9_0,
-        });
-        bounds_group.addLayer(layer_MorganCentre_9);
-        map.addLayer(layer_MorganCentre_9);
-        function pop_StLawrenceChurch_10(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_StLawrenceChurch_10_0() {
-            return {
-                pane: 'pane_StLawrenceChurch_10',
-                opacity: 1,
-                color: 'rgba(0,246,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 4.0,
-                fillOpacity: 0,
-                interactive: false,
-            }
-        }
-        map.createPane('pane_StLawrenceChurch_10');
-        map.getPane('pane_StLawrenceChurch_10').style.zIndex = 410;
-        map.getPane('pane_StLawrenceChurch_10').style['mix-blend-mode'] = 'normal';
-        var layer_StLawrenceChurch_10 = new L.geoJson(json_StLawrenceChurch_10, {
-            attribution: '',
-            interactive: false,
-            dataVar: 'json_StLawrenceChurch_10',
-            layerName: 'layer_StLawrenceChurch_10',
-            pane: 'pane_StLawrenceChurch_10',
-            onEachFeature: pop_StLawrenceChurch_10,
-            style: style_StLawrenceChurch_10_0,
-        });
-        bounds_group.addLayer(layer_StLawrenceChurch_10);
-        map.addLayer(layer_StLawrenceChurch_10);
-        function pop_HolyTrinityCatholicChurch_11(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_HolyTrinityCatholicChurch_11_0() {
-            return {
-                pane: 'pane_HolyTrinityCatholicChurch_11',
+                pane: 'pane_StKatherinesParishCentre_4',
                 opacity: 1,
                 color: 'rgba(244,255,0,1.0)',
                 dashArray: '',
@@ -855,21 +418,86 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_HolyTrinityCatholicChurch_11');
-        map.getPane('pane_HolyTrinityCatholicChurch_11').style.zIndex = 411;
-        map.getPane('pane_HolyTrinityCatholicChurch_11').style['mix-blend-mode'] = 'normal';
-        var layer_HolyTrinityCatholicChurch_11 = new L.geoJson(json_HolyTrinityCatholicChurch_11, {
+        map.createPane('pane_StKatherinesParishCentre_4');
+        map.getPane('pane_StKatherinesParishCentre_4').style.zIndex = 404;
+        map.getPane('pane_StKatherinesParishCentre_4').style['mix-blend-mode'] = 'normal';
+        var layer_StKatherinesParishCentre_4 = new L.geoJson(json_StKatherinesParishCentre_4, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_HolyTrinityCatholicChurch_11',
-            layerName: 'layer_HolyTrinityCatholicChurch_11',
-            pane: 'pane_HolyTrinityCatholicChurch_11',
-            onEachFeature: pop_HolyTrinityCatholicChurch_11,
-            style: style_HolyTrinityCatholicChurch_11_0,
+            dataVar: 'json_StKatherinesParishCentre_4',
+            layerName: 'layer_StKatherinesParishCentre_4',
+            pane: 'pane_StKatherinesParishCentre_4',
+            onEachFeature: pop_StKatherinesParishCentre_4,
+            style: style_StKatherinesParishCentre_4_0,
         });
-        bounds_group.addLayer(layer_HolyTrinityCatholicChurch_11);
-        map.addLayer(layer_HolyTrinityCatholicChurch_11);
-        function pop_TabernacleandPentecostalChurch_12(feature, layer) {
+        bounds_group.addLayer(layer_StKatherinesParishCentre_4);
+        map.addLayer(layer_StKatherinesParishCentre_4);
+        function pop_StAlbantheMartyrsChurchHall_5(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">begin</th>\
+                        <td class="visible-with-data" id="begin">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_StAlbantheMartyrsChurchHall_5_0() {
+            return {
+                pane: 'pane_StAlbantheMartyrsChurchHall_5',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_StAlbantheMartyrsChurchHall_5');
+        map.getPane('pane_StAlbantheMartyrsChurchHall_5').style.zIndex = 405;
+        map.getPane('pane_StAlbantheMartyrsChurchHall_5').style['mix-blend-mode'] = 'normal';
+        var layer_StAlbantheMartyrsChurchHall_5 = new L.geoJson(json_StAlbantheMartyrsChurchHall_5, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_StAlbantheMartyrsChurchHall_5',
+            layerName: 'layer_StAlbantheMartyrsChurchHall_5',
+            pane: 'pane_StAlbantheMartyrsChurchHall_5',
+            onEachFeature: pop_StAlbantheMartyrsChurchHall_5,
+            style: style_StAlbantheMartyrsChurchHall_5_0,
+        });
+        bounds_group.addLayer(layer_StAlbantheMartyrsChurchHall_5);
+        map.addLayer(layer_StAlbantheMartyrsChurchHall_5);
+        function pop_GoldingtonReadingRecreationRooms_6(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -906,11 +534,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_TabernacleandPentecostalChurch_12_0() {
+        function style_GoldingtonReadingRecreationRooms_6_0() {
             return {
-                pane: 'pane_TabernacleandPentecostalChurch_12',
+                pane: 'pane_GoldingtonReadingRecreationRooms_6',
                 opacity: 1,
-                color: 'rgba(0,246,255,1.0)',
+                color: 'rgba(244,255,0,1.0)',
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
@@ -919,21 +547,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_TabernacleandPentecostalChurch_12');
-        map.getPane('pane_TabernacleandPentecostalChurch_12').style.zIndex = 412;
-        map.getPane('pane_TabernacleandPentecostalChurch_12').style['mix-blend-mode'] = 'normal';
-        var layer_TabernacleandPentecostalChurch_12 = new L.geoJson(json_TabernacleandPentecostalChurch_12, {
+        map.createPane('pane_GoldingtonReadingRecreationRooms_6');
+        map.getPane('pane_GoldingtonReadingRecreationRooms_6').style.zIndex = 406;
+        map.getPane('pane_GoldingtonReadingRecreationRooms_6').style['mix-blend-mode'] = 'normal';
+        var layer_GoldingtonReadingRecreationRooms_6 = new L.geoJson(json_GoldingtonReadingRecreationRooms_6, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_TabernacleandPentecostalChurch_12',
-            layerName: 'layer_TabernacleandPentecostalChurch_12',
-            pane: 'pane_TabernacleandPentecostalChurch_12',
-            onEachFeature: pop_TabernacleandPentecostalChurch_12,
-            style: style_TabernacleandPentecostalChurch_12_0,
+            dataVar: 'json_GoldingtonReadingRecreationRooms_6',
+            layerName: 'layer_GoldingtonReadingRecreationRooms_6',
+            pane: 'pane_GoldingtonReadingRecreationRooms_6',
+            onEachFeature: pop_GoldingtonReadingRecreationRooms_6,
+            style: style_GoldingtonReadingRecreationRooms_6_0,
         });
-        bounds_group.addLayer(layer_TabernacleandPentecostalChurch_12);
-        map.addLayer(layer_TabernacleandPentecostalChurch_12);
-        function pop_TottonandElingCommunityCentre_13(feature, layer) {
+        bounds_group.addLayer(layer_GoldingtonReadingRecreationRooms_6);
+        map.addLayer(layer_GoldingtonReadingRecreationRooms_6);
+        function pop_PrioryMethodistChurch_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -970,9 +598,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_TottonandElingCommunityCentre_13_0() {
+        function style_PrioryMethodistChurch_7_0() {
             return {
-                pane: 'pane_TottonandElingCommunityCentre_13',
+                pane: 'pane_PrioryMethodistChurch_7',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -983,21 +611,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_TottonandElingCommunityCentre_13');
-        map.getPane('pane_TottonandElingCommunityCentre_13').style.zIndex = 413;
-        map.getPane('pane_TottonandElingCommunityCentre_13').style['mix-blend-mode'] = 'normal';
-        var layer_TottonandElingCommunityCentre_13 = new L.geoJson(json_TottonandElingCommunityCentre_13, {
+        map.createPane('pane_PrioryMethodistChurch_7');
+        map.getPane('pane_PrioryMethodistChurch_7').style.zIndex = 407;
+        map.getPane('pane_PrioryMethodistChurch_7').style['mix-blend-mode'] = 'normal';
+        var layer_PrioryMethodistChurch_7 = new L.geoJson(json_PrioryMethodistChurch_7, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_TottonandElingCommunityCentre_13',
-            layerName: 'layer_TottonandElingCommunityCentre_13',
-            pane: 'pane_TottonandElingCommunityCentre_13',
-            onEachFeature: pop_TottonandElingCommunityCentre_13,
-            style: style_TottonandElingCommunityCentre_13_0,
+            dataVar: 'json_PrioryMethodistChurch_7',
+            layerName: 'layer_PrioryMethodistChurch_7',
+            pane: 'pane_PrioryMethodistChurch_7',
+            onEachFeature: pop_PrioryMethodistChurch_7,
+            style: style_PrioryMethodistChurch_7_0,
         });
-        bounds_group.addLayer(layer_TottonandElingCommunityCentre_13);
-        map.addLayer(layer_TottonandElingCommunityCentre_13);
-        function pop_CroftCourtHotel_14(feature, layer) {
+        bounds_group.addLayer(layer_PrioryMethodistChurch_7);
+        map.addLayer(layer_PrioryMethodistChurch_7);
+        function pop_StAndrewsChurch_8(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1034,9 +662,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CroftCourtHotel_14_0() {
+        function style_StAndrewsChurch_8_0() {
             return {
-                pane: 'pane_CroftCourtHotel_14',
+                pane: 'pane_StAndrewsChurch_8',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1047,21 +675,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_CroftCourtHotel_14');
-        map.getPane('pane_CroftCourtHotel_14').style.zIndex = 414;
-        map.getPane('pane_CroftCourtHotel_14').style['mix-blend-mode'] = 'normal';
-        var layer_CroftCourtHotel_14 = new L.geoJson(json_CroftCourtHotel_14, {
+        map.createPane('pane_StAndrewsChurch_8');
+        map.getPane('pane_StAndrewsChurch_8').style.zIndex = 408;
+        map.getPane('pane_StAndrewsChurch_8').style['mix-blend-mode'] = 'normal';
+        var layer_StAndrewsChurch_8 = new L.geoJson(json_StAndrewsChurch_8, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_CroftCourtHotel_14',
-            layerName: 'layer_CroftCourtHotel_14',
-            pane: 'pane_CroftCourtHotel_14',
-            onEachFeature: pop_CroftCourtHotel_14,
-            style: style_CroftCourtHotel_14_0,
+            dataVar: 'json_StAndrewsChurch_8',
+            layerName: 'layer_StAndrewsChurch_8',
+            pane: 'pane_StAndrewsChurch_8',
+            onEachFeature: pop_StAndrewsChurch_8,
+            style: style_StAndrewsChurch_8_0,
         });
-        bounds_group.addLayer(layer_CroftCourtHotel_14);
-        map.addLayer(layer_CroftCourtHotel_14);
-        function pop_GreatWyrleyMethodistChurch_15(feature, layer) {
+        bounds_group.addLayer(layer_StAndrewsChurch_8);
+        map.addLayer(layer_StAndrewsChurch_8);
+        function pop_TheCatholicChurchCommunityHall_9(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1098,9 +726,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_GreatWyrleyMethodistChurch_15_0() {
+        function style_TheCatholicChurchCommunityHall_9_0() {
             return {
-                pane: 'pane_GreatWyrleyMethodistChurch_15',
+                pane: 'pane_TheCatholicChurchCommunityHall_9',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1111,21 +739,981 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_GreatWyrleyMethodistChurch_15');
-        map.getPane('pane_GreatWyrleyMethodistChurch_15').style.zIndex = 415;
-        map.getPane('pane_GreatWyrleyMethodistChurch_15').style['mix-blend-mode'] = 'normal';
-        var layer_GreatWyrleyMethodistChurch_15 = new L.geoJson(json_GreatWyrleyMethodistChurch_15, {
+        map.createPane('pane_TheCatholicChurchCommunityHall_9');
+        map.getPane('pane_TheCatholicChurchCommunityHall_9').style.zIndex = 409;
+        map.getPane('pane_TheCatholicChurchCommunityHall_9').style['mix-blend-mode'] = 'normal';
+        var layer_TheCatholicChurchCommunityHall_9 = new L.geoJson(json_TheCatholicChurchCommunityHall_9, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_GreatWyrleyMethodistChurch_15',
-            layerName: 'layer_GreatWyrleyMethodistChurch_15',
-            pane: 'pane_GreatWyrleyMethodistChurch_15',
-            onEachFeature: pop_GreatWyrleyMethodistChurch_15,
-            style: style_GreatWyrleyMethodistChurch_15_0,
+            dataVar: 'json_TheCatholicChurchCommunityHall_9',
+            layerName: 'layer_TheCatholicChurchCommunityHall_9',
+            pane: 'pane_TheCatholicChurchCommunityHall_9',
+            onEachFeature: pop_TheCatholicChurchCommunityHall_9,
+            style: style_TheCatholicChurchCommunityHall_9_0,
         });
-        bounds_group.addLayer(layer_GreatWyrleyMethodistChurch_15);
-        map.addLayer(layer_GreatWyrleyMethodistChurch_15);
-        function pop_CheamSocialClub_16(feature, layer) {
+        bounds_group.addLayer(layer_TheCatholicChurchCommunityHall_9);
+        map.addLayer(layer_TheCatholicChurchCommunityHall_9);
+        function pop_StSavioursChurchHall_10(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_StSavioursChurchHall_10_0() {
+            return {
+                pane: 'pane_StSavioursChurchHall_10',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_StSavioursChurchHall_10');
+        map.getPane('pane_StSavioursChurchHall_10').style.zIndex = 410;
+        map.getPane('pane_StSavioursChurchHall_10').style['mix-blend-mode'] = 'normal';
+        var layer_StSavioursChurchHall_10 = new L.geoJson(json_StSavioursChurchHall_10, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_StSavioursChurchHall_10',
+            layerName: 'layer_StSavioursChurchHall_10',
+            pane: 'pane_StSavioursChurchHall_10',
+            onEachFeature: pop_StSavioursChurchHall_10,
+            style: style_StSavioursChurchHall_10_0,
+        });
+        bounds_group.addLayer(layer_StSavioursChurchHall_10);
+        map.addLayer(layer_StSavioursChurchHall_10);
+        function pop_ChinehamVillageHall_11(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_ChinehamVillageHall_11_0() {
+            return {
+                pane: 'pane_ChinehamVillageHall_11',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_ChinehamVillageHall_11');
+        map.getPane('pane_ChinehamVillageHall_11').style.zIndex = 411;
+        map.getPane('pane_ChinehamVillageHall_11').style['mix-blend-mode'] = 'normal';
+        var layer_ChinehamVillageHall_11 = new L.geoJson(json_ChinehamVillageHall_11, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_ChinehamVillageHall_11',
+            layerName: 'layer_ChinehamVillageHall_11',
+            pane: 'pane_ChinehamVillageHall_11',
+            onEachFeature: pop_ChinehamVillageHall_11,
+            style: style_ChinehamVillageHall_11_0,
+        });
+        bounds_group.addLayer(layer_ChinehamVillageHall_11);
+        map.addLayer(layer_ChinehamVillageHall_11);
+        function pop_MiltonMethodistChurch_12(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_MiltonMethodistChurch_12_0() {
+            return {
+                pane: 'pane_MiltonMethodistChurch_12',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_MiltonMethodistChurch_12');
+        map.getPane('pane_MiltonMethodistChurch_12').style.zIndex = 412;
+        map.getPane('pane_MiltonMethodistChurch_12').style['mix-blend-mode'] = 'normal';
+        var layer_MiltonMethodistChurch_12 = new L.geoJson(json_MiltonMethodistChurch_12, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_MiltonMethodistChurch_12',
+            layerName: 'layer_MiltonMethodistChurch_12',
+            pane: 'pane_MiltonMethodistChurch_12',
+            onEachFeature: pop_MiltonMethodistChurch_12,
+            style: style_MiltonMethodistChurch_12_0,
+        });
+        bounds_group.addLayer(layer_MiltonMethodistChurch_12);
+        map.addLayer(layer_MiltonMethodistChurch_12);
+        function pop_CartertonCommunityCentre_13(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_CartertonCommunityCentre_13_0() {
+            return {
+                pane: 'pane_CartertonCommunityCentre_13',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_CartertonCommunityCentre_13');
+        map.getPane('pane_CartertonCommunityCentre_13').style.zIndex = 413;
+        map.getPane('pane_CartertonCommunityCentre_13').style['mix-blend-mode'] = 'normal';
+        var layer_CartertonCommunityCentre_13 = new L.geoJson(json_CartertonCommunityCentre_13, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_CartertonCommunityCentre_13',
+            layerName: 'layer_CartertonCommunityCentre_13',
+            pane: 'pane_CartertonCommunityCentre_13',
+            onEachFeature: pop_CartertonCommunityCentre_13,
+            style: style_CartertonCommunityCentre_13_0,
+        });
+        bounds_group.addLayer(layer_CartertonCommunityCentre_13);
+        map.addLayer(layer_CartertonCommunityCentre_13);
+        function pop_LangleyHallSocialClub_14(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_LangleyHallSocialClub_14_0() {
+            return {
+                pane: 'pane_LangleyHallSocialClub_14',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_LangleyHallSocialClub_14');
+        map.getPane('pane_LangleyHallSocialClub_14').style.zIndex = 414;
+        map.getPane('pane_LangleyHallSocialClub_14').style['mix-blend-mode'] = 'normal';
+        var layer_LangleyHallSocialClub_14 = new L.geoJson(json_LangleyHallSocialClub_14, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_LangleyHallSocialClub_14',
+            layerName: 'layer_LangleyHallSocialClub_14',
+            pane: 'pane_LangleyHallSocialClub_14',
+            onEachFeature: pop_LangleyHallSocialClub_14,
+            style: style_LangleyHallSocialClub_14_0,
+        });
+        bounds_group.addLayer(layer_LangleyHallSocialClub_14);
+        map.addLayer(layer_LangleyHallSocialClub_14);
+        function pop_EastOakleyVillageHall_15(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_EastOakleyVillageHall_15_0() {
+            return {
+                pane: 'pane_EastOakleyVillageHall_15',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_EastOakleyVillageHall_15');
+        map.getPane('pane_EastOakleyVillageHall_15').style.zIndex = 415;
+        map.getPane('pane_EastOakleyVillageHall_15').style['mix-blend-mode'] = 'normal';
+        var layer_EastOakleyVillageHall_15 = new L.geoJson(json_EastOakleyVillageHall_15, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_EastOakleyVillageHall_15',
+            layerName: 'layer_EastOakleyVillageHall_15',
+            pane: 'pane_EastOakleyVillageHall_15',
+            onEachFeature: pop_EastOakleyVillageHall_15,
+            style: style_EastOakleyVillageHall_15_0,
+        });
+        bounds_group.addLayer(layer_EastOakleyVillageHall_15);
+        map.addLayer(layer_EastOakleyVillageHall_15);
+        function pop_CedarBarnHall_16(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_CedarBarnHall_16_0() {
+            return {
+                pane: 'pane_CedarBarnHall_16',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_CedarBarnHall_16');
+        map.getPane('pane_CedarBarnHall_16').style.zIndex = 416;
+        map.getPane('pane_CedarBarnHall_16').style['mix-blend-mode'] = 'normal';
+        var layer_CedarBarnHall_16 = new L.geoJson(json_CedarBarnHall_16, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_CedarBarnHall_16',
+            layerName: 'layer_CedarBarnHall_16',
+            pane: 'pane_CedarBarnHall_16',
+            onEachFeature: pop_CedarBarnHall_16,
+            style: style_CedarBarnHall_16_0,
+        });
+        bounds_group.addLayer(layer_CedarBarnHall_16);
+        map.addLayer(layer_CedarBarnHall_16);
+        function pop_StGabrielsChurch_17(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_StGabrielsChurch_17_0() {
+            return {
+                pane: 'pane_StGabrielsChurch_17',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_StGabrielsChurch_17');
+        map.getPane('pane_StGabrielsChurch_17').style.zIndex = 417;
+        map.getPane('pane_StGabrielsChurch_17').style['mix-blend-mode'] = 'normal';
+        var layer_StGabrielsChurch_17 = new L.geoJson(json_StGabrielsChurch_17, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_StGabrielsChurch_17',
+            layerName: 'layer_StGabrielsChurch_17',
+            pane: 'pane_StGabrielsChurch_17',
+            onEachFeature: pop_StGabrielsChurch_17,
+            style: style_StGabrielsChurch_17_0,
+        });
+        bounds_group.addLayer(layer_StGabrielsChurch_17);
+        map.addLayer(layer_StGabrielsChurch_17);
+        function pop_MorganCentre_18(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_MorganCentre_18_0() {
+            return {
+                pane: 'pane_MorganCentre_18',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_MorganCentre_18');
+        map.getPane('pane_MorganCentre_18').style.zIndex = 418;
+        map.getPane('pane_MorganCentre_18').style['mix-blend-mode'] = 'normal';
+        var layer_MorganCentre_18 = new L.geoJson(json_MorganCentre_18, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_MorganCentre_18',
+            layerName: 'layer_MorganCentre_18',
+            pane: 'pane_MorganCentre_18',
+            onEachFeature: pop_MorganCentre_18,
+            style: style_MorganCentre_18_0,
+        });
+        bounds_group.addLayer(layer_MorganCentre_18);
+        map.addLayer(layer_MorganCentre_18);
+        function pop_StLawrenceChurch_19(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_StLawrenceChurch_19_0() {
+            return {
+                pane: 'pane_StLawrenceChurch_19',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_StLawrenceChurch_19');
+        map.getPane('pane_StLawrenceChurch_19').style.zIndex = 419;
+        map.getPane('pane_StLawrenceChurch_19').style['mix-blend-mode'] = 'normal';
+        var layer_StLawrenceChurch_19 = new L.geoJson(json_StLawrenceChurch_19, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_StLawrenceChurch_19',
+            layerName: 'layer_StLawrenceChurch_19',
+            pane: 'pane_StLawrenceChurch_19',
+            onEachFeature: pop_StLawrenceChurch_19,
+            style: style_StLawrenceChurch_19_0,
+        });
+        bounds_group.addLayer(layer_StLawrenceChurch_19);
+        map.addLayer(layer_StLawrenceChurch_19);
+        function pop_HolyTrinityCatholicChurch_20(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_HolyTrinityCatholicChurch_20_0() {
+            return {
+                pane: 'pane_HolyTrinityCatholicChurch_20',
+                opacity: 1,
+                color: 'rgba(244,255,0,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_HolyTrinityCatholicChurch_20');
+        map.getPane('pane_HolyTrinityCatholicChurch_20').style.zIndex = 420;
+        map.getPane('pane_HolyTrinityCatholicChurch_20').style['mix-blend-mode'] = 'normal';
+        var layer_HolyTrinityCatholicChurch_20 = new L.geoJson(json_HolyTrinityCatholicChurch_20, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_HolyTrinityCatholicChurch_20',
+            layerName: 'layer_HolyTrinityCatholicChurch_20',
+            pane: 'pane_HolyTrinityCatholicChurch_20',
+            onEachFeature: pop_HolyTrinityCatholicChurch_20,
+            style: style_HolyTrinityCatholicChurch_20_0,
+        });
+        bounds_group.addLayer(layer_HolyTrinityCatholicChurch_20);
+        map.addLayer(layer_HolyTrinityCatholicChurch_20);
+        function pop_TabernacleandPentecostalChurch_21(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_TabernacleandPentecostalChurch_21_0() {
+            return {
+                pane: 'pane_TabernacleandPentecostalChurch_21',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_TabernacleandPentecostalChurch_21');
+        map.getPane('pane_TabernacleandPentecostalChurch_21').style.zIndex = 421;
+        map.getPane('pane_TabernacleandPentecostalChurch_21').style['mix-blend-mode'] = 'normal';
+        var layer_TabernacleandPentecostalChurch_21 = new L.geoJson(json_TabernacleandPentecostalChurch_21, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_TabernacleandPentecostalChurch_21',
+            layerName: 'layer_TabernacleandPentecostalChurch_21',
+            pane: 'pane_TabernacleandPentecostalChurch_21',
+            onEachFeature: pop_TabernacleandPentecostalChurch_21,
+            style: style_TabernacleandPentecostalChurch_21_0,
+        });
+        bounds_group.addLayer(layer_TabernacleandPentecostalChurch_21);
+        map.addLayer(layer_TabernacleandPentecostalChurch_21);
+        function pop_TottonandElingCommunityCentre_22(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_TottonandElingCommunityCentre_22_0() {
+            return {
+                pane: 'pane_TottonandElingCommunityCentre_22',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_TottonandElingCommunityCentre_22');
+        map.getPane('pane_TottonandElingCommunityCentre_22').style.zIndex = 422;
+        map.getPane('pane_TottonandElingCommunityCentre_22').style['mix-blend-mode'] = 'normal';
+        var layer_TottonandElingCommunityCentre_22 = new L.geoJson(json_TottonandElingCommunityCentre_22, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_TottonandElingCommunityCentre_22',
+            layerName: 'layer_TottonandElingCommunityCentre_22',
+            pane: 'pane_TottonandElingCommunityCentre_22',
+            onEachFeature: pop_TottonandElingCommunityCentre_22,
+            style: style_TottonandElingCommunityCentre_22_0,
+        });
+        bounds_group.addLayer(layer_TottonandElingCommunityCentre_22);
+        map.addLayer(layer_TottonandElingCommunityCentre_22);
+        function pop_CroftCourtHotel_23(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_CroftCourtHotel_23_0() {
+            return {
+                pane: 'pane_CroftCourtHotel_23',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_CroftCourtHotel_23');
+        map.getPane('pane_CroftCourtHotel_23').style.zIndex = 423;
+        map.getPane('pane_CroftCourtHotel_23').style['mix-blend-mode'] = 'normal';
+        var layer_CroftCourtHotel_23 = new L.geoJson(json_CroftCourtHotel_23, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_CroftCourtHotel_23',
+            layerName: 'layer_CroftCourtHotel_23',
+            pane: 'pane_CroftCourtHotel_23',
+            onEachFeature: pop_CroftCourtHotel_23,
+            style: style_CroftCourtHotel_23_0,
+        });
+        bounds_group.addLayer(layer_CroftCourtHotel_23);
+        map.addLayer(layer_CroftCourtHotel_23);
+        function pop_GreatWyrleyMethodistChurch_24(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_GreatWyrleyMethodistChurch_24_0() {
+            return {
+                pane: 'pane_GreatWyrleyMethodistChurch_24',
+                opacity: 1,
+                color: 'rgba(0,246,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_GreatWyrleyMethodistChurch_24');
+        map.getPane('pane_GreatWyrleyMethodistChurch_24').style.zIndex = 424;
+        map.getPane('pane_GreatWyrleyMethodistChurch_24').style['mix-blend-mode'] = 'normal';
+        var layer_GreatWyrleyMethodistChurch_24 = new L.geoJson(json_GreatWyrleyMethodistChurch_24, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_GreatWyrleyMethodistChurch_24',
+            layerName: 'layer_GreatWyrleyMethodistChurch_24',
+            pane: 'pane_GreatWyrleyMethodistChurch_24',
+            onEachFeature: pop_GreatWyrleyMethodistChurch_24,
+            style: style_GreatWyrleyMethodistChurch_24_0,
+        });
+        bounds_group.addLayer(layer_GreatWyrleyMethodistChurch_24);
+        map.addLayer(layer_GreatWyrleyMethodistChurch_24);
+        function pop_CheamSocialClub_25(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1163,9 +1751,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CheamSocialClub_16_0() {
+        function style_CheamSocialClub_25_0() {
             return {
-                pane: 'pane_CheamSocialClub_16',
+                pane: 'pane_CheamSocialClub_25',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1176,21 +1764,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_CheamSocialClub_16');
-        map.getPane('pane_CheamSocialClub_16').style.zIndex = 416;
-        map.getPane('pane_CheamSocialClub_16').style['mix-blend-mode'] = 'normal';
-        var layer_CheamSocialClub_16 = new L.geoJson(json_CheamSocialClub_16, {
+        map.createPane('pane_CheamSocialClub_25');
+        map.getPane('pane_CheamSocialClub_25').style.zIndex = 425;
+        map.getPane('pane_CheamSocialClub_25').style['mix-blend-mode'] = 'normal';
+        var layer_CheamSocialClub_25 = new L.geoJson(json_CheamSocialClub_25, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_CheamSocialClub_16',
-            layerName: 'layer_CheamSocialClub_16',
-            pane: 'pane_CheamSocialClub_16',
-            onEachFeature: pop_CheamSocialClub_16,
-            style: style_CheamSocialClub_16_0,
+            dataVar: 'json_CheamSocialClub_25',
+            layerName: 'layer_CheamSocialClub_25',
+            pane: 'pane_CheamSocialClub_25',
+            onEachFeature: pop_CheamSocialClub_25,
+            style: style_CheamSocialClub_25_0,
         });
-        bounds_group.addLayer(layer_CheamSocialClub_16);
-        map.addLayer(layer_CheamSocialClub_16);
-        function pop_PaghamVillageHall_17(feature, layer) {
+        bounds_group.addLayer(layer_CheamSocialClub_25);
+        map.addLayer(layer_CheamSocialClub_25);
+        function pop_PaghamVillageHall_26(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1227,9 +1815,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_PaghamVillageHall_17_0() {
+        function style_PaghamVillageHall_26_0() {
             return {
-                pane: 'pane_PaghamVillageHall_17',
+                pane: 'pane_PaghamVillageHall_26',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1240,21 +1828,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_PaghamVillageHall_17');
-        map.getPane('pane_PaghamVillageHall_17').style.zIndex = 417;
-        map.getPane('pane_PaghamVillageHall_17').style['mix-blend-mode'] = 'normal';
-        var layer_PaghamVillageHall_17 = new L.geoJson(json_PaghamVillageHall_17, {
+        map.createPane('pane_PaghamVillageHall_26');
+        map.getPane('pane_PaghamVillageHall_26').style.zIndex = 426;
+        map.getPane('pane_PaghamVillageHall_26').style['mix-blend-mode'] = 'normal';
+        var layer_PaghamVillageHall_26 = new L.geoJson(json_PaghamVillageHall_26, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_PaghamVillageHall_17',
-            layerName: 'layer_PaghamVillageHall_17',
-            pane: 'pane_PaghamVillageHall_17',
-            onEachFeature: pop_PaghamVillageHall_17,
-            style: style_PaghamVillageHall_17_0,
+            dataVar: 'json_PaghamVillageHall_26',
+            layerName: 'layer_PaghamVillageHall_26',
+            pane: 'pane_PaghamVillageHall_26',
+            onEachFeature: pop_PaghamVillageHall_26,
+            style: style_PaghamVillageHall_26_0,
         });
-        bounds_group.addLayer(layer_PaghamVillageHall_17);
-        map.addLayer(layer_PaghamVillageHall_17);
-        function pop_BerstedParkCommunityCentre_18(feature, layer) {
+        bounds_group.addLayer(layer_PaghamVillageHall_26);
+        map.addLayer(layer_PaghamVillageHall_26);
+        function pop_BerstedParkCommunityCentre_27(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1291,9 +1879,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_BerstedParkCommunityCentre_18_0() {
+        function style_BerstedParkCommunityCentre_27_0() {
             return {
-                pane: 'pane_BerstedParkCommunityCentre_18',
+                pane: 'pane_BerstedParkCommunityCentre_27',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1304,21 +1892,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_BerstedParkCommunityCentre_18');
-        map.getPane('pane_BerstedParkCommunityCentre_18').style.zIndex = 418;
-        map.getPane('pane_BerstedParkCommunityCentre_18').style['mix-blend-mode'] = 'normal';
-        var layer_BerstedParkCommunityCentre_18 = new L.geoJson(json_BerstedParkCommunityCentre_18, {
+        map.createPane('pane_BerstedParkCommunityCentre_27');
+        map.getPane('pane_BerstedParkCommunityCentre_27').style.zIndex = 427;
+        map.getPane('pane_BerstedParkCommunityCentre_27').style['mix-blend-mode'] = 'normal';
+        var layer_BerstedParkCommunityCentre_27 = new L.geoJson(json_BerstedParkCommunityCentre_27, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_BerstedParkCommunityCentre_18',
-            layerName: 'layer_BerstedParkCommunityCentre_18',
-            pane: 'pane_BerstedParkCommunityCentre_18',
-            onEachFeature: pop_BerstedParkCommunityCentre_18,
-            style: style_BerstedParkCommunityCentre_18_0,
+            dataVar: 'json_BerstedParkCommunityCentre_27',
+            layerName: 'layer_BerstedParkCommunityCentre_27',
+            pane: 'pane_BerstedParkCommunityCentre_27',
+            onEachFeature: pop_BerstedParkCommunityCentre_27,
+            style: style_BerstedParkCommunityCentre_27_0,
         });
-        bounds_group.addLayer(layer_BerstedParkCommunityCentre_18);
-        map.addLayer(layer_BerstedParkCommunityCentre_18);
-        function pop_YewTreeTamebridgeCommunityCentre_19(feature, layer) {
+        bounds_group.addLayer(layer_BerstedParkCommunityCentre_27);
+        map.addLayer(layer_BerstedParkCommunityCentre_27);
+        function pop_YewTreeTamebridgeCommunityCentre_28(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1355,9 +1943,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_YewTreeTamebridgeCommunityCentre_19_0() {
+        function style_YewTreeTamebridgeCommunityCentre_28_0() {
             return {
-                pane: 'pane_YewTreeTamebridgeCommunityCentre_19',
+                pane: 'pane_YewTreeTamebridgeCommunityCentre_28',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1368,21 +1956,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_YewTreeTamebridgeCommunityCentre_19');
-        map.getPane('pane_YewTreeTamebridgeCommunityCentre_19').style.zIndex = 419;
-        map.getPane('pane_YewTreeTamebridgeCommunityCentre_19').style['mix-blend-mode'] = 'normal';
-        var layer_YewTreeTamebridgeCommunityCentre_19 = new L.geoJson(json_YewTreeTamebridgeCommunityCentre_19, {
+        map.createPane('pane_YewTreeTamebridgeCommunityCentre_28');
+        map.getPane('pane_YewTreeTamebridgeCommunityCentre_28').style.zIndex = 428;
+        map.getPane('pane_YewTreeTamebridgeCommunityCentre_28').style['mix-blend-mode'] = 'normal';
+        var layer_YewTreeTamebridgeCommunityCentre_28 = new L.geoJson(json_YewTreeTamebridgeCommunityCentre_28, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_YewTreeTamebridgeCommunityCentre_19',
-            layerName: 'layer_YewTreeTamebridgeCommunityCentre_19',
-            pane: 'pane_YewTreeTamebridgeCommunityCentre_19',
-            onEachFeature: pop_YewTreeTamebridgeCommunityCentre_19,
-            style: style_YewTreeTamebridgeCommunityCentre_19_0,
+            dataVar: 'json_YewTreeTamebridgeCommunityCentre_28',
+            layerName: 'layer_YewTreeTamebridgeCommunityCentre_28',
+            pane: 'pane_YewTreeTamebridgeCommunityCentre_28',
+            onEachFeature: pop_YewTreeTamebridgeCommunityCentre_28,
+            style: style_YewTreeTamebridgeCommunityCentre_28_0,
         });
-        bounds_group.addLayer(layer_YewTreeTamebridgeCommunityCentre_19);
-        map.addLayer(layer_YewTreeTamebridgeCommunityCentre_19);
-        function pop_ChristtheKingCatholicChurch_20(feature, layer) {
+        bounds_group.addLayer(layer_YewTreeTamebridgeCommunityCentre_28);
+        map.addLayer(layer_YewTreeTamebridgeCommunityCentre_28);
+        function pop_ChristtheKingCatholicChurch_29(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1419,9 +2007,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_ChristtheKingCatholicChurch_20_0() {
+        function style_ChristtheKingCatholicChurch_29_0() {
             return {
-                pane: 'pane_ChristtheKingCatholicChurch_20',
+                pane: 'pane_ChristtheKingCatholicChurch_29',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1432,21 +2020,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_ChristtheKingCatholicChurch_20');
-        map.getPane('pane_ChristtheKingCatholicChurch_20').style.zIndex = 420;
-        map.getPane('pane_ChristtheKingCatholicChurch_20').style['mix-blend-mode'] = 'normal';
-        var layer_ChristtheKingCatholicChurch_20 = new L.geoJson(json_ChristtheKingCatholicChurch_20, {
+        map.createPane('pane_ChristtheKingCatholicChurch_29');
+        map.getPane('pane_ChristtheKingCatholicChurch_29').style.zIndex = 429;
+        map.getPane('pane_ChristtheKingCatholicChurch_29').style['mix-blend-mode'] = 'normal';
+        var layer_ChristtheKingCatholicChurch_29 = new L.geoJson(json_ChristtheKingCatholicChurch_29, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_ChristtheKingCatholicChurch_20',
-            layerName: 'layer_ChristtheKingCatholicChurch_20',
-            pane: 'pane_ChristtheKingCatholicChurch_20',
-            onEachFeature: pop_ChristtheKingCatholicChurch_20,
-            style: style_ChristtheKingCatholicChurch_20_0,
+            dataVar: 'json_ChristtheKingCatholicChurch_29',
+            layerName: 'layer_ChristtheKingCatholicChurch_29',
+            pane: 'pane_ChristtheKingCatholicChurch_29',
+            onEachFeature: pop_ChristtheKingCatholicChurch_29,
+            style: style_ChristtheKingCatholicChurch_29_0,
         });
-        bounds_group.addLayer(layer_ChristtheKingCatholicChurch_20);
-        map.addLayer(layer_ChristtheKingCatholicChurch_20);
-        function pop_WhetstoneMemorialHall_21(feature, layer) {
+        bounds_group.addLayer(layer_ChristtheKingCatholicChurch_29);
+        map.addLayer(layer_ChristtheKingCatholicChurch_29);
+        function pop_WhetstoneMemorialHall_30(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1483,9 +2071,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_WhetstoneMemorialHall_21_0() {
+        function style_WhetstoneMemorialHall_30_0() {
             return {
-                pane: 'pane_WhetstoneMemorialHall_21',
+                pane: 'pane_WhetstoneMemorialHall_30',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1496,21 +2084,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_WhetstoneMemorialHall_21');
-        map.getPane('pane_WhetstoneMemorialHall_21').style.zIndex = 421;
-        map.getPane('pane_WhetstoneMemorialHall_21').style['mix-blend-mode'] = 'normal';
-        var layer_WhetstoneMemorialHall_21 = new L.geoJson(json_WhetstoneMemorialHall_21, {
+        map.createPane('pane_WhetstoneMemorialHall_30');
+        map.getPane('pane_WhetstoneMemorialHall_30').style.zIndex = 430;
+        map.getPane('pane_WhetstoneMemorialHall_30').style['mix-blend-mode'] = 'normal';
+        var layer_WhetstoneMemorialHall_30 = new L.geoJson(json_WhetstoneMemorialHall_30, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_WhetstoneMemorialHall_21',
-            layerName: 'layer_WhetstoneMemorialHall_21',
-            pane: 'pane_WhetstoneMemorialHall_21',
-            onEachFeature: pop_WhetstoneMemorialHall_21,
-            style: style_WhetstoneMemorialHall_21_0,
+            dataVar: 'json_WhetstoneMemorialHall_30',
+            layerName: 'layer_WhetstoneMemorialHall_30',
+            pane: 'pane_WhetstoneMemorialHall_30',
+            onEachFeature: pop_WhetstoneMemorialHall_30,
+            style: style_WhetstoneMemorialHall_30_0,
         });
-        bounds_group.addLayer(layer_WhetstoneMemorialHall_21);
-        map.addLayer(layer_WhetstoneMemorialHall_21);
-        function pop_PerryBeechesBaptistChurch_22(feature, layer) {
+        bounds_group.addLayer(layer_WhetstoneMemorialHall_30);
+        map.addLayer(layer_WhetstoneMemorialHall_30);
+        function pop_PerryBeechesBaptistChurch_31(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1547,9 +2135,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_PerryBeechesBaptistChurch_22_0() {
+        function style_PerryBeechesBaptistChurch_31_0() {
             return {
-                pane: 'pane_PerryBeechesBaptistChurch_22',
+                pane: 'pane_PerryBeechesBaptistChurch_31',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1560,21 +2148,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_PerryBeechesBaptistChurch_22');
-        map.getPane('pane_PerryBeechesBaptistChurch_22').style.zIndex = 422;
-        map.getPane('pane_PerryBeechesBaptistChurch_22').style['mix-blend-mode'] = 'normal';
-        var layer_PerryBeechesBaptistChurch_22 = new L.geoJson(json_PerryBeechesBaptistChurch_22, {
+        map.createPane('pane_PerryBeechesBaptistChurch_31');
+        map.getPane('pane_PerryBeechesBaptistChurch_31').style.zIndex = 431;
+        map.getPane('pane_PerryBeechesBaptistChurch_31').style['mix-blend-mode'] = 'normal';
+        var layer_PerryBeechesBaptistChurch_31 = new L.geoJson(json_PerryBeechesBaptistChurch_31, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_PerryBeechesBaptistChurch_22',
-            layerName: 'layer_PerryBeechesBaptistChurch_22',
-            pane: 'pane_PerryBeechesBaptistChurch_22',
-            onEachFeature: pop_PerryBeechesBaptistChurch_22,
-            style: style_PerryBeechesBaptistChurch_22_0,
+            dataVar: 'json_PerryBeechesBaptistChurch_31',
+            layerName: 'layer_PerryBeechesBaptistChurch_31',
+            pane: 'pane_PerryBeechesBaptistChurch_31',
+            onEachFeature: pop_PerryBeechesBaptistChurch_31,
+            style: style_PerryBeechesBaptistChurch_31_0,
         });
-        bounds_group.addLayer(layer_PerryBeechesBaptistChurch_22);
-        map.addLayer(layer_PerryBeechesBaptistChurch_22);
-        function pop_TheShirleyCentre_23(feature, layer) {
+        bounds_group.addLayer(layer_PerryBeechesBaptistChurch_31);
+        map.addLayer(layer_PerryBeechesBaptistChurch_31);
+        function pop_TheShirleyCentre_32(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1611,9 +2199,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_TheShirleyCentre_23_0() {
+        function style_TheShirleyCentre_32_0() {
             return {
-                pane: 'pane_TheShirleyCentre_23',
+                pane: 'pane_TheShirleyCentre_32',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1624,21 +2212,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_TheShirleyCentre_23');
-        map.getPane('pane_TheShirleyCentre_23').style.zIndex = 423;
-        map.getPane('pane_TheShirleyCentre_23').style['mix-blend-mode'] = 'normal';
-        var layer_TheShirleyCentre_23 = new L.geoJson(json_TheShirleyCentre_23, {
+        map.createPane('pane_TheShirleyCentre_32');
+        map.getPane('pane_TheShirleyCentre_32').style.zIndex = 432;
+        map.getPane('pane_TheShirleyCentre_32').style['mix-blend-mode'] = 'normal';
+        var layer_TheShirleyCentre_32 = new L.geoJson(json_TheShirleyCentre_32, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_TheShirleyCentre_23',
-            layerName: 'layer_TheShirleyCentre_23',
-            pane: 'pane_TheShirleyCentre_23',
-            onEachFeature: pop_TheShirleyCentre_23,
-            style: style_TheShirleyCentre_23_0,
+            dataVar: 'json_TheShirleyCentre_32',
+            layerName: 'layer_TheShirleyCentre_32',
+            pane: 'pane_TheShirleyCentre_32',
+            onEachFeature: pop_TheShirleyCentre_32,
+            style: style_TheShirleyCentre_32_0,
         });
-        bounds_group.addLayer(layer_TheShirleyCentre_23);
-        map.addLayer(layer_TheShirleyCentre_23);
-        function pop_NorthBaddesleyVillageHall_24(feature, layer) {
+        bounds_group.addLayer(layer_TheShirleyCentre_32);
+        map.addLayer(layer_TheShirleyCentre_32);
+        function pop_NorthBaddesleyVillageHall_33(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1675,9 +2263,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_NorthBaddesleyVillageHall_24_0() {
+        function style_NorthBaddesleyVillageHall_33_0() {
             return {
-                pane: 'pane_NorthBaddesleyVillageHall_24',
+                pane: 'pane_NorthBaddesleyVillageHall_33',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1688,21 +2276,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_NorthBaddesleyVillageHall_24');
-        map.getPane('pane_NorthBaddesleyVillageHall_24').style.zIndex = 424;
-        map.getPane('pane_NorthBaddesleyVillageHall_24').style['mix-blend-mode'] = 'normal';
-        var layer_NorthBaddesleyVillageHall_24 = new L.geoJson(json_NorthBaddesleyVillageHall_24, {
+        map.createPane('pane_NorthBaddesleyVillageHall_33');
+        map.getPane('pane_NorthBaddesleyVillageHall_33').style.zIndex = 433;
+        map.getPane('pane_NorthBaddesleyVillageHall_33').style['mix-blend-mode'] = 'normal';
+        var layer_NorthBaddesleyVillageHall_33 = new L.geoJson(json_NorthBaddesleyVillageHall_33, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_NorthBaddesleyVillageHall_24',
-            layerName: 'layer_NorthBaddesleyVillageHall_24',
-            pane: 'pane_NorthBaddesleyVillageHall_24',
-            onEachFeature: pop_NorthBaddesleyVillageHall_24,
-            style: style_NorthBaddesleyVillageHall_24_0,
+            dataVar: 'json_NorthBaddesleyVillageHall_33',
+            layerName: 'layer_NorthBaddesleyVillageHall_33',
+            pane: 'pane_NorthBaddesleyVillageHall_33',
+            onEachFeature: pop_NorthBaddesleyVillageHall_33,
+            style: style_NorthBaddesleyVillageHall_33_0,
         });
-        bounds_group.addLayer(layer_NorthBaddesleyVillageHall_24);
-        map.addLayer(layer_NorthBaddesleyVillageHall_24);
-        function pop_RomseyComradesClub_25(feature, layer) {
+        bounds_group.addLayer(layer_NorthBaddesleyVillageHall_33);
+        map.addLayer(layer_NorthBaddesleyVillageHall_33);
+        function pop_RomseyComradesClub_34(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1739,9 +2327,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_RomseyComradesClub_25_0() {
+        function style_RomseyComradesClub_34_0() {
             return {
-                pane: 'pane_RomseyComradesClub_25',
+                pane: 'pane_RomseyComradesClub_34',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1752,21 +2340,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_RomseyComradesClub_25');
-        map.getPane('pane_RomseyComradesClub_25').style.zIndex = 425;
-        map.getPane('pane_RomseyComradesClub_25').style['mix-blend-mode'] = 'normal';
-        var layer_RomseyComradesClub_25 = new L.geoJson(json_RomseyComradesClub_25, {
+        map.createPane('pane_RomseyComradesClub_34');
+        map.getPane('pane_RomseyComradesClub_34').style.zIndex = 434;
+        map.getPane('pane_RomseyComradesClub_34').style['mix-blend-mode'] = 'normal';
+        var layer_RomseyComradesClub_34 = new L.geoJson(json_RomseyComradesClub_34, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_RomseyComradesClub_25',
-            layerName: 'layer_RomseyComradesClub_25',
-            pane: 'pane_RomseyComradesClub_25',
-            onEachFeature: pop_RomseyComradesClub_25,
-            style: style_RomseyComradesClub_25_0,
+            dataVar: 'json_RomseyComradesClub_34',
+            layerName: 'layer_RomseyComradesClub_34',
+            pane: 'pane_RomseyComradesClub_34',
+            onEachFeature: pop_RomseyComradesClub_34,
+            style: style_RomseyComradesClub_34_0,
         });
-        bounds_group.addLayer(layer_RomseyComradesClub_25);
-        map.addLayer(layer_RomseyComradesClub_25);
-        function pop_FourOaksMethodistChurch_26(feature, layer) {
+        bounds_group.addLayer(layer_RomseyComradesClub_34);
+        map.addLayer(layer_RomseyComradesClub_34);
+        function pop_FourOaksMethodistChurch_35(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1803,9 +2391,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_FourOaksMethodistChurch_26_0() {
+        function style_FourOaksMethodistChurch_35_0() {
             return {
-                pane: 'pane_FourOaksMethodistChurch_26',
+                pane: 'pane_FourOaksMethodistChurch_35',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1816,21 +2404,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_FourOaksMethodistChurch_26');
-        map.getPane('pane_FourOaksMethodistChurch_26').style.zIndex = 426;
-        map.getPane('pane_FourOaksMethodistChurch_26').style['mix-blend-mode'] = 'normal';
-        var layer_FourOaksMethodistChurch_26 = new L.geoJson(json_FourOaksMethodistChurch_26, {
+        map.createPane('pane_FourOaksMethodistChurch_35');
+        map.getPane('pane_FourOaksMethodistChurch_35').style.zIndex = 435;
+        map.getPane('pane_FourOaksMethodistChurch_35').style['mix-blend-mode'] = 'normal';
+        var layer_FourOaksMethodistChurch_35 = new L.geoJson(json_FourOaksMethodistChurch_35, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_FourOaksMethodistChurch_26',
-            layerName: 'layer_FourOaksMethodistChurch_26',
-            pane: 'pane_FourOaksMethodistChurch_26',
-            onEachFeature: pop_FourOaksMethodistChurch_26,
-            style: style_FourOaksMethodistChurch_26_0,
+            dataVar: 'json_FourOaksMethodistChurch_35',
+            layerName: 'layer_FourOaksMethodistChurch_35',
+            pane: 'pane_FourOaksMethodistChurch_35',
+            onEachFeature: pop_FourOaksMethodistChurch_35,
+            style: style_FourOaksMethodistChurch_35_0,
         });
-        bounds_group.addLayer(layer_FourOaksMethodistChurch_26);
-        map.addLayer(layer_FourOaksMethodistChurch_26);
-        function pop_YeovilExServicesSocialClub_27(feature, layer) {
+        bounds_group.addLayer(layer_FourOaksMethodistChurch_35);
+        map.addLayer(layer_FourOaksMethodistChurch_35);
+        function pop_YeovilExServicesSocialClub_36(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1867,9 +2455,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_YeovilExServicesSocialClub_27_0() {
+        function style_YeovilExServicesSocialClub_36_0() {
             return {
-                pane: 'pane_YeovilExServicesSocialClub_27',
+                pane: 'pane_YeovilExServicesSocialClub_36',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1880,21 +2468,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_YeovilExServicesSocialClub_27');
-        map.getPane('pane_YeovilExServicesSocialClub_27').style.zIndex = 427;
-        map.getPane('pane_YeovilExServicesSocialClub_27').style['mix-blend-mode'] = 'normal';
-        var layer_YeovilExServicesSocialClub_27 = new L.geoJson(json_YeovilExServicesSocialClub_27, {
+        map.createPane('pane_YeovilExServicesSocialClub_36');
+        map.getPane('pane_YeovilExServicesSocialClub_36').style.zIndex = 436;
+        map.getPane('pane_YeovilExServicesSocialClub_36').style['mix-blend-mode'] = 'normal';
+        var layer_YeovilExServicesSocialClub_36 = new L.geoJson(json_YeovilExServicesSocialClub_36, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_YeovilExServicesSocialClub_27',
-            layerName: 'layer_YeovilExServicesSocialClub_27',
-            pane: 'pane_YeovilExServicesSocialClub_27',
-            onEachFeature: pop_YeovilExServicesSocialClub_27,
-            style: style_YeovilExServicesSocialClub_27_0,
+            dataVar: 'json_YeovilExServicesSocialClub_36',
+            layerName: 'layer_YeovilExServicesSocialClub_36',
+            pane: 'pane_YeovilExServicesSocialClub_36',
+            onEachFeature: pop_YeovilExServicesSocialClub_36,
+            style: style_YeovilExServicesSocialClub_36_0,
         });
-        bounds_group.addLayer(layer_YeovilExServicesSocialClub_27);
-        map.addLayer(layer_YeovilExServicesSocialClub_27);
-        function pop_PortfieldCommunityCentre_28(feature, layer) {
+        bounds_group.addLayer(layer_YeovilExServicesSocialClub_36);
+        map.addLayer(layer_YeovilExServicesSocialClub_36);
+        function pop_PortfieldCommunityCentre_37(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1931,9 +2519,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_PortfieldCommunityCentre_28_0() {
+        function style_PortfieldCommunityCentre_37_0() {
             return {
-                pane: 'pane_PortfieldCommunityCentre_28',
+                pane: 'pane_PortfieldCommunityCentre_37',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -1944,21 +2532,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_PortfieldCommunityCentre_28');
-        map.getPane('pane_PortfieldCommunityCentre_28').style.zIndex = 428;
-        map.getPane('pane_PortfieldCommunityCentre_28').style['mix-blend-mode'] = 'normal';
-        var layer_PortfieldCommunityCentre_28 = new L.geoJson(json_PortfieldCommunityCentre_28, {
+        map.createPane('pane_PortfieldCommunityCentre_37');
+        map.getPane('pane_PortfieldCommunityCentre_37').style.zIndex = 437;
+        map.getPane('pane_PortfieldCommunityCentre_37').style['mix-blend-mode'] = 'normal';
+        var layer_PortfieldCommunityCentre_37 = new L.geoJson(json_PortfieldCommunityCentre_37, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_PortfieldCommunityCentre_28',
-            layerName: 'layer_PortfieldCommunityCentre_28',
-            pane: 'pane_PortfieldCommunityCentre_28',
-            onEachFeature: pop_PortfieldCommunityCentre_28,
-            style: style_PortfieldCommunityCentre_28_0,
+            dataVar: 'json_PortfieldCommunityCentre_37',
+            layerName: 'layer_PortfieldCommunityCentre_37',
+            pane: 'pane_PortfieldCommunityCentre_37',
+            onEachFeature: pop_PortfieldCommunityCentre_37,
+            style: style_PortfieldCommunityCentre_37_0,
         });
-        bounds_group.addLayer(layer_PortfieldCommunityCentre_28);
-        map.addLayer(layer_PortfieldCommunityCentre_28);
-        function pop_BS14SocialClub_29(feature, layer) {
+        bounds_group.addLayer(layer_PortfieldCommunityCentre_37);
+        map.addLayer(layer_PortfieldCommunityCentre_37);
+        function pop_BS14SocialClub_38(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1995,9 +2583,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_BS14SocialClub_29_0() {
+        function style_BS14SocialClub_38_0() {
             return {
-                pane: 'pane_BS14SocialClub_29',
+                pane: 'pane_BS14SocialClub_38',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -2008,21 +2596,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_BS14SocialClub_29');
-        map.getPane('pane_BS14SocialClub_29').style.zIndex = 429;
-        map.getPane('pane_BS14SocialClub_29').style['mix-blend-mode'] = 'normal';
-        var layer_BS14SocialClub_29 = new L.geoJson(json_BS14SocialClub_29, {
+        map.createPane('pane_BS14SocialClub_38');
+        map.getPane('pane_BS14SocialClub_38').style.zIndex = 438;
+        map.getPane('pane_BS14SocialClub_38').style['mix-blend-mode'] = 'normal';
+        var layer_BS14SocialClub_38 = new L.geoJson(json_BS14SocialClub_38, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_BS14SocialClub_29',
-            layerName: 'layer_BS14SocialClub_29',
-            pane: 'pane_BS14SocialClub_29',
-            onEachFeature: pop_BS14SocialClub_29,
-            style: style_BS14SocialClub_29_0,
+            dataVar: 'json_BS14SocialClub_38',
+            layerName: 'layer_BS14SocialClub_38',
+            pane: 'pane_BS14SocialClub_38',
+            onEachFeature: pop_BS14SocialClub_38,
+            style: style_BS14SocialClub_38_0,
         });
-        bounds_group.addLayer(layer_BS14SocialClub_29);
-        map.addLayer(layer_BS14SocialClub_29);
-        function pop_TheHollymoorCentre_30(feature, layer) {
+        bounds_group.addLayer(layer_BS14SocialClub_38);
+        map.addLayer(layer_BS14SocialClub_38);
+        function pop_TheHollymoorCentre_39(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2059,9 +2647,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_TheHollymoorCentre_30_0() {
+        function style_TheHollymoorCentre_39_0() {
             return {
-                pane: 'pane_TheHollymoorCentre_30',
+                pane: 'pane_TheHollymoorCentre_39',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -2072,21 +2660,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_TheHollymoorCentre_30');
-        map.getPane('pane_TheHollymoorCentre_30').style.zIndex = 430;
-        map.getPane('pane_TheHollymoorCentre_30').style['mix-blend-mode'] = 'normal';
-        var layer_TheHollymoorCentre_30 = new L.geoJson(json_TheHollymoorCentre_30, {
+        map.createPane('pane_TheHollymoorCentre_39');
+        map.getPane('pane_TheHollymoorCentre_39').style.zIndex = 439;
+        map.getPane('pane_TheHollymoorCentre_39').style['mix-blend-mode'] = 'normal';
+        var layer_TheHollymoorCentre_39 = new L.geoJson(json_TheHollymoorCentre_39, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_TheHollymoorCentre_30',
-            layerName: 'layer_TheHollymoorCentre_30',
-            pane: 'pane_TheHollymoorCentre_30',
-            onEachFeature: pop_TheHollymoorCentre_30,
-            style: style_TheHollymoorCentre_30_0,
+            dataVar: 'json_TheHollymoorCentre_39',
+            layerName: 'layer_TheHollymoorCentre_39',
+            pane: 'pane_TheHollymoorCentre_39',
+            onEachFeature: pop_TheHollymoorCentre_39,
+            style: style_TheHollymoorCentre_39_0,
         });
-        bounds_group.addLayer(layer_TheHollymoorCentre_30);
-        map.addLayer(layer_TheHollymoorCentre_30);
-        function pop_IrthlingboroughCricketClub_31(feature, layer) {
+        bounds_group.addLayer(layer_TheHollymoorCentre_39);
+        map.addLayer(layer_TheHollymoorCentre_39);
+        function pop_IrthlingboroughCricketClub_40(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2123,9 +2711,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_IrthlingboroughCricketClub_31_0() {
+        function style_IrthlingboroughCricketClub_40_0() {
             return {
-                pane: 'pane_IrthlingboroughCricketClub_31',
+                pane: 'pane_IrthlingboroughCricketClub_40',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -2136,21 +2724,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_IrthlingboroughCricketClub_31');
-        map.getPane('pane_IrthlingboroughCricketClub_31').style.zIndex = 431;
-        map.getPane('pane_IrthlingboroughCricketClub_31').style['mix-blend-mode'] = 'normal';
-        var layer_IrthlingboroughCricketClub_31 = new L.geoJson(json_IrthlingboroughCricketClub_31, {
+        map.createPane('pane_IrthlingboroughCricketClub_40');
+        map.getPane('pane_IrthlingboroughCricketClub_40').style.zIndex = 440;
+        map.getPane('pane_IrthlingboroughCricketClub_40').style['mix-blend-mode'] = 'normal';
+        var layer_IrthlingboroughCricketClub_40 = new L.geoJson(json_IrthlingboroughCricketClub_40, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_IrthlingboroughCricketClub_31',
-            layerName: 'layer_IrthlingboroughCricketClub_31',
-            pane: 'pane_IrthlingboroughCricketClub_31',
-            onEachFeature: pop_IrthlingboroughCricketClub_31,
-            style: style_IrthlingboroughCricketClub_31_0,
+            dataVar: 'json_IrthlingboroughCricketClub_40',
+            layerName: 'layer_IrthlingboroughCricketClub_40',
+            pane: 'pane_IrthlingboroughCricketClub_40',
+            onEachFeature: pop_IrthlingboroughCricketClub_40,
+            style: style_IrthlingboroughCricketClub_40_0,
         });
-        bounds_group.addLayer(layer_IrthlingboroughCricketClub_31);
-        map.addLayer(layer_IrthlingboroughCricketClub_31);
-        function pop_StowParkLawnTennisClub_32(feature, layer) {
+        bounds_group.addLayer(layer_IrthlingboroughCricketClub_40);
+        map.addLayer(layer_IrthlingboroughCricketClub_40);
+        function pop_StowParkLawnTennisClub_41(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2187,9 +2775,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_StowParkLawnTennisClub_32_0() {
+        function style_StowParkLawnTennisClub_41_0() {
             return {
-                pane: 'pane_StowParkLawnTennisClub_32',
+                pane: 'pane_StowParkLawnTennisClub_41',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -2200,21 +2788,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_StowParkLawnTennisClub_32');
-        map.getPane('pane_StowParkLawnTennisClub_32').style.zIndex = 432;
-        map.getPane('pane_StowParkLawnTennisClub_32').style['mix-blend-mode'] = 'normal';
-        var layer_StowParkLawnTennisClub_32 = new L.geoJson(json_StowParkLawnTennisClub_32, {
+        map.createPane('pane_StowParkLawnTennisClub_41');
+        map.getPane('pane_StowParkLawnTennisClub_41').style.zIndex = 441;
+        map.getPane('pane_StowParkLawnTennisClub_41').style['mix-blend-mode'] = 'normal';
+        var layer_StowParkLawnTennisClub_41 = new L.geoJson(json_StowParkLawnTennisClub_41, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_StowParkLawnTennisClub_32',
-            layerName: 'layer_StowParkLawnTennisClub_32',
-            pane: 'pane_StowParkLawnTennisClub_32',
-            onEachFeature: pop_StowParkLawnTennisClub_32,
-            style: style_StowParkLawnTennisClub_32_0,
+            dataVar: 'json_StowParkLawnTennisClub_41',
+            layerName: 'layer_StowParkLawnTennisClub_41',
+            pane: 'pane_StowParkLawnTennisClub_41',
+            onEachFeature: pop_StowParkLawnTennisClub_41,
+            style: style_StowParkLawnTennisClub_41_0,
         });
-        bounds_group.addLayer(layer_StowParkLawnTennisClub_32);
-        map.addLayer(layer_StowParkLawnTennisClub_32);
-        function pop_ParkesHallSocialClub_33(feature, layer) {
+        bounds_group.addLayer(layer_StowParkLawnTennisClub_41);
+        map.addLayer(layer_StowParkLawnTennisClub_41);
+        function pop_ParkesHallSocialClub_42(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2251,9 +2839,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_ParkesHallSocialClub_33_0() {
+        function style_ParkesHallSocialClub_42_0() {
             return {
-                pane: 'pane_ParkesHallSocialClub_33',
+                pane: 'pane_ParkesHallSocialClub_42',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -2264,21 +2852,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_ParkesHallSocialClub_33');
-        map.getPane('pane_ParkesHallSocialClub_33').style.zIndex = 433;
-        map.getPane('pane_ParkesHallSocialClub_33').style['mix-blend-mode'] = 'normal';
-        var layer_ParkesHallSocialClub_33 = new L.geoJson(json_ParkesHallSocialClub_33, {
+        map.createPane('pane_ParkesHallSocialClub_42');
+        map.getPane('pane_ParkesHallSocialClub_42').style.zIndex = 442;
+        map.getPane('pane_ParkesHallSocialClub_42').style['mix-blend-mode'] = 'normal';
+        var layer_ParkesHallSocialClub_42 = new L.geoJson(json_ParkesHallSocialClub_42, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_ParkesHallSocialClub_33',
-            layerName: 'layer_ParkesHallSocialClub_33',
-            pane: 'pane_ParkesHallSocialClub_33',
-            onEachFeature: pop_ParkesHallSocialClub_33,
-            style: style_ParkesHallSocialClub_33_0,
+            dataVar: 'json_ParkesHallSocialClub_42',
+            layerName: 'layer_ParkesHallSocialClub_42',
+            pane: 'pane_ParkesHallSocialClub_42',
+            onEachFeature: pop_ParkesHallSocialClub_42,
+            style: style_ParkesHallSocialClub_42_0,
         });
-        bounds_group.addLayer(layer_ParkesHallSocialClub_33);
-        map.addLayer(layer_ParkesHallSocialClub_33);
-        function pop_CoveBaptistChurch_34(feature, layer) {
+        bounds_group.addLayer(layer_ParkesHallSocialClub_42);
+        map.addLayer(layer_ParkesHallSocialClub_42);
+        function pop_CoveBaptistChurch_43(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2315,9 +2903,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CoveBaptistChurch_34_0() {
+        function style_CoveBaptistChurch_43_0() {
             return {
-                pane: 'pane_CoveBaptistChurch_34',
+                pane: 'pane_CoveBaptistChurch_43',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -2328,21 +2916,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_CoveBaptistChurch_34');
-        map.getPane('pane_CoveBaptistChurch_34').style.zIndex = 434;
-        map.getPane('pane_CoveBaptistChurch_34').style['mix-blend-mode'] = 'normal';
-        var layer_CoveBaptistChurch_34 = new L.geoJson(json_CoveBaptistChurch_34, {
+        map.createPane('pane_CoveBaptistChurch_43');
+        map.getPane('pane_CoveBaptistChurch_43').style.zIndex = 443;
+        map.getPane('pane_CoveBaptistChurch_43').style['mix-blend-mode'] = 'normal';
+        var layer_CoveBaptistChurch_43 = new L.geoJson(json_CoveBaptistChurch_43, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_CoveBaptistChurch_34',
-            layerName: 'layer_CoveBaptistChurch_34',
-            pane: 'pane_CoveBaptistChurch_34',
-            onEachFeature: pop_CoveBaptistChurch_34,
-            style: style_CoveBaptistChurch_34_0,
+            dataVar: 'json_CoveBaptistChurch_43',
+            layerName: 'layer_CoveBaptistChurch_43',
+            pane: 'pane_CoveBaptistChurch_43',
+            onEachFeature: pop_CoveBaptistChurch_43,
+            style: style_CoveBaptistChurch_43_0,
         });
-        bounds_group.addLayer(layer_CoveBaptistChurch_34);
-        map.addLayer(layer_CoveBaptistChurch_34);
-        function pop_BeaufortCommunityCentre_35(feature, layer) {
+        bounds_group.addLayer(layer_CoveBaptistChurch_43);
+        map.addLayer(layer_CoveBaptistChurch_43);
+        function pop_BeaufortCommunityCentre_44(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2412,9 +3000,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_BeaufortCommunityCentre_35_0() {
+        function style_BeaufortCommunityCentre_44_0() {
             return {
-                pane: 'pane_BeaufortCommunityCentre_35',
+                pane: 'pane_BeaufortCommunityCentre_44',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -2425,21 +3013,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_BeaufortCommunityCentre_35');
-        map.getPane('pane_BeaufortCommunityCentre_35').style.zIndex = 435;
-        map.getPane('pane_BeaufortCommunityCentre_35').style['mix-blend-mode'] = 'normal';
-        var layer_BeaufortCommunityCentre_35 = new L.geoJson(json_BeaufortCommunityCentre_35, {
+        map.createPane('pane_BeaufortCommunityCentre_44');
+        map.getPane('pane_BeaufortCommunityCentre_44').style.zIndex = 444;
+        map.getPane('pane_BeaufortCommunityCentre_44').style['mix-blend-mode'] = 'normal';
+        var layer_BeaufortCommunityCentre_44 = new L.geoJson(json_BeaufortCommunityCentre_44, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_BeaufortCommunityCentre_35',
-            layerName: 'layer_BeaufortCommunityCentre_35',
-            pane: 'pane_BeaufortCommunityCentre_35',
-            onEachFeature: pop_BeaufortCommunityCentre_35,
-            style: style_BeaufortCommunityCentre_35_0,
+            dataVar: 'json_BeaufortCommunityCentre_44',
+            layerName: 'layer_BeaufortCommunityCentre_44',
+            pane: 'pane_BeaufortCommunityCentre_44',
+            onEachFeature: pop_BeaufortCommunityCentre_44,
+            style: style_BeaufortCommunityCentre_44_0,
         });
-        bounds_group.addLayer(layer_BeaufortCommunityCentre_35);
-        map.addLayer(layer_BeaufortCommunityCentre_35);
-        function pop_SouthamptonPrioryParkCommunityHallmerged_36(feature, layer) {
+        bounds_group.addLayer(layer_BeaufortCommunityCentre_44);
+        map.addLayer(layer_BeaufortCommunityCentre_44);
+        function pop_SouthamptonPrioryParkCommunityHallmerged_45(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2470,9 +3058,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_SouthamptonPrioryParkCommunityHallmerged_36_0() {
+        function style_SouthamptonPrioryParkCommunityHallmerged_45_0() {
             return {
-                pane: 'pane_SouthamptonPrioryParkCommunityHallmerged_36',
+                pane: 'pane_SouthamptonPrioryParkCommunityHallmerged_45',
                 opacity: 1,
                 color: 'rgba(0,246,255,1.0)',
                 dashArray: '',
@@ -2483,21 +3071,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_SouthamptonPrioryParkCommunityHallmerged_36');
-        map.getPane('pane_SouthamptonPrioryParkCommunityHallmerged_36').style.zIndex = 436;
-        map.getPane('pane_SouthamptonPrioryParkCommunityHallmerged_36').style['mix-blend-mode'] = 'normal';
-        var layer_SouthamptonPrioryParkCommunityHallmerged_36 = new L.geoJson(json_SouthamptonPrioryParkCommunityHallmerged_36, {
+        map.createPane('pane_SouthamptonPrioryParkCommunityHallmerged_45');
+        map.getPane('pane_SouthamptonPrioryParkCommunityHallmerged_45').style.zIndex = 445;
+        map.getPane('pane_SouthamptonPrioryParkCommunityHallmerged_45').style['mix-blend-mode'] = 'normal';
+        var layer_SouthamptonPrioryParkCommunityHallmerged_45 = new L.geoJson(json_SouthamptonPrioryParkCommunityHallmerged_45, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_SouthamptonPrioryParkCommunityHallmerged_36',
-            layerName: 'layer_SouthamptonPrioryParkCommunityHallmerged_36',
-            pane: 'pane_SouthamptonPrioryParkCommunityHallmerged_36',
-            onEachFeature: pop_SouthamptonPrioryParkCommunityHallmerged_36,
-            style: style_SouthamptonPrioryParkCommunityHallmerged_36_0,
+            dataVar: 'json_SouthamptonPrioryParkCommunityHallmerged_45',
+            layerName: 'layer_SouthamptonPrioryParkCommunityHallmerged_45',
+            pane: 'pane_SouthamptonPrioryParkCommunityHallmerged_45',
+            onEachFeature: pop_SouthamptonPrioryParkCommunityHallmerged_45,
+            style: style_SouthamptonPrioryParkCommunityHallmerged_45_0,
         });
-        bounds_group.addLayer(layer_SouthamptonPrioryParkCommunityHallmerged_36);
-        map.addLayer(layer_SouthamptonPrioryParkCommunityHallmerged_36);
-        function pop_Venue_37(feature, layer) {
+        bounds_group.addLayer(layer_SouthamptonPrioryParkCommunityHallmerged_45);
+        map.addLayer(layer_SouthamptonPrioryParkCommunityHallmerged_45);
+        function pop_Venue_46(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2539,6 +3127,9 @@
                         <th scope="row">Promotion Date</th>\
                         <td class="visible-with-data" id="Promotion Date">' + (feature.properties['Promotion Date'] !== null ? autolinker.link(String(feature.properties['Promotion Date']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Team Leader'] !== null ? autolinker.link(String(feature.properties['Team Leader']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -2547,11 +3138,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Venue_37_0(feature) {
+        function style_Venue_46_0(feature) {
             switch(String(feature.properties['Venue Name'])) {
                 default:
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2567,7 +3158,7 @@
                     break;
                 case 'Beaufort Comunity Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2583,7 +3174,7 @@
                     break;
                 case 'Bersted Park Communty Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2599,7 +3190,7 @@
                     break;
                 case 'BS14 Social Club':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2615,7 +3206,7 @@
                     break;
                 case 'Cheam Social Club':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2631,7 +3222,7 @@
                     break;
                 case 'Christ the King Catholic Church':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2647,7 +3238,7 @@
                     break;
                 case 'Cove Baptist Church':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2663,7 +3254,7 @@
                     break;
                 case 'Croft Court Hotel':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2679,7 +3270,7 @@
                     break;
                 case 'Four Oaks Methodist Church':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2695,7 +3286,7 @@
                     break;
                 case 'Great Wyrley Methodist Church':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2711,7 +3302,7 @@
                     break;
                 case 'Irthlingborough Cricket Club':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2727,7 +3318,7 @@
                     break;
                 case 'North Baddesley Village Hall':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2743,7 +3334,7 @@
                     break;
                 case 'Pagham Village Hall':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2759,7 +3350,7 @@
                     break;
                 case 'Parkes Hall Social Club':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2775,7 +3366,7 @@
                     break;
                 case 'Perry Beeches Baptist Church':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2791,7 +3382,7 @@
                     break;
                 case 'Portfield Community Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2807,7 +3398,7 @@
                     break;
                 case 'Priory Park Community Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2823,7 +3414,7 @@
                     break;
                 case 'Romsey Comrades Club':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2839,7 +3430,7 @@
                     break;
                 case 'Stow Park Lawn Tennis Club':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2855,7 +3446,7 @@
                     break;
                 case 'Tabernacle and Pentecostal Church':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2871,7 +3462,7 @@
                     break;
                 case 'The Hollymoor Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2887,7 +3478,7 @@
                     break;
                 case 'The Shirley Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2903,7 +3494,7 @@
                     break;
                 case 'Totton and Eling Community Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2919,7 +3510,7 @@
                     break;
                 case 'Whetstone Memorial Hall':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2935,7 +3526,7 @@
                     break;
                 case 'Yeovil Ex Services & Social Club':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2951,7 +3542,7 @@
                     break;
                 case 'Yew Tree & Tamebridge Community Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2967,7 +3558,7 @@
                     break;
                 case 'Holy Trinity Catholic Church':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2983,7 +3574,7 @@
                     break;
                 case 'St Lawrence Church':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -2999,7 +3590,7 @@
                     break;
                 case 'Cedar Barn Hall':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -3015,7 +3606,7 @@
                     break;
                 case 'Morgan Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -3031,7 +3622,7 @@
                     break;
                 case 'St Gabriel\'s Hall':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -3047,7 +3638,7 @@
                     break;
                 case 'Carterton Community Centre':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -3063,7 +3654,7 @@
                     break;
                 case 'East Oakley Village Hall':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -3079,7 +3670,7 @@
                     break;
                 case 'Langley Hall Social Club':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -3095,7 +3686,7 @@
                     break;
                 case 'Chineham Village Hall':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -3111,7 +3702,7 @@
                     break;
                 case 'Milton Methodist Church':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -3127,7 +3718,7 @@
                     break;
                 case 'St Saviour\'s Church Hall':
                     return {
-                pane: 'pane_Venue_37',
+                pane: 'pane_Venue_46',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,0.8)',
@@ -3141,37 +3732,181 @@
                 interactive: true,
             }
                     break;
+                case 'Priory Methodist Church':
+                    return {
+                pane: 'pane_Venue_46',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,234,255,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Andrews Church':
+                    return {
+                pane: 'pane_Venue_46',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,234,255,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Simon\'s Church':
+                    return {
+                pane: 'pane_Venue_46',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,234,255,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'The Catholic Church Community Hall':
+                    return {
+                pane: 'pane_Venue_46',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,234,255,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Bushmead Commuinty Hub':
+                    return {
+                pane: 'pane_Venue_46',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,234,255,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Goldington Reading & Recreation Rooms':
+                    return {
+                pane: 'pane_Venue_46',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(244,255,0,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Our Lady of the Rosary RC Church':
+                    return {
+                pane: 'pane_Venue_46',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,234,255,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Alban the Martyr\'s Church Hall':
+                    return {
+                pane: 'pane_Venue_46',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,234,255,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Katherine\'s Parish Centre':
+                    return {
+                pane: 'pane_Venue_46',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(244,255,0,0.8)',
+                interactive: true,
+            }
+                    break;
             }
         }
-        map.createPane('pane_Venue_37');
-        map.getPane('pane_Venue_37').style.zIndex = 437;
-        map.getPane('pane_Venue_37').style['mix-blend-mode'] = 'normal';
-        var layer_Venue_37 = new L.geoJson(json_Venue_37, {
+        map.createPane('pane_Venue_46');
+        map.getPane('pane_Venue_46').style.zIndex = 446;
+        map.getPane('pane_Venue_46').style['mix-blend-mode'] = 'normal';
+        var layer_Venue_46 = new L.geoJson(json_Venue_46, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Venue_37',
-            layerName: 'layer_Venue_37',
-            pane: 'pane_Venue_37',
-            onEachFeature: pop_Venue_37,
+            dataVar: 'json_Venue_46',
+            layerName: 'layer_Venue_46',
+            pane: 'pane_Venue_46',
+            onEachFeature: pop_Venue_46,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Venue_37_0(feature));
+                return L.circleMarker(latlng, style_Venue_46_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Venue_37);
-        map.addLayer(layer_Venue_37);
+        bounds_group.addLayer(layer_Venue_46);
+        map.addLayer(layer_Venue_46);
         map.on("zoomend", function(){
 
-                if (map.hasLayer(layer_Venue_37)) {
+                if (map.hasLayer(layer_Venue_46)) {
                     if (map.getZoom() <= 12 && map.getZoom() >= 19) {
-                        layer_Venue_37.eachLayer(function (layer) {
+                        layer_Venue_46.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
                     } else {
-                        layer_Venue_37.eachLayer(function (layer) {
+                        layer_Venue_46.eachLayer(function (layer) {
                             layer.closeTooltip();
                         });
                     }
@@ -3179,38 +3914,48 @@
         });
         setBounds();
         var i = 0;
-        layer_Venue_37.eachLayer(function(layer) {
+        layer_Venue_46.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['Venue Name'] !== null?String('<div style="color: #323232; font-size: 12pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['Venue Name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Venue_37'});
+            layer.bindTooltip((layer.feature.properties['Venue Name'] !== null?String('<div style="color: #323232; font-size: 12pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['Venue Name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Venue_46'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-                if (map.hasLayer(layer_Venue_37)) {
+                if (map.hasLayer(layer_Venue_46)) {
                     if (map.getZoom() <= 12 && map.getZoom() >= 19) {
-                        layer_Venue_37.eachLayer(function (layer) {
+                        layer_Venue_46.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
                     } else {
-                        layer_Venue_37.eachLayer(function (layer) {
+                        layer_Venue_46.eachLayer(function (layer) {
                             layer.closeTooltip();
                         });
                     }
                 }
-        resetLabels([layer_Venue_37]);
+        map.addControl(new L.Control.Search({
+            layer: layer_Venue_46,
+            initial: false,
+            hideMarkerOnCollapse: true,
+            propertyName: 'Search Text'}));
+        if (typeof url === 'undefined') {
+            document.getElementsByClassName('search-button')[0].className += ' fa fa-binoculars';
+        } else {
+            document.getElementsByClassName('search-button')[1].className += ' fa fa-binoculars';
+        }
+        resetLabels([layer_Venue_46]);
         map.on("zoomend", function(){
-            resetLabels([layer_Venue_37]);
+            resetLabels([layer_Venue_46]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Venue_37]);
+            resetLabels([layer_Venue_46]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Venue_37]);
+            resetLabels([layer_Venue_46]);
         });
         </script>
     </body>
